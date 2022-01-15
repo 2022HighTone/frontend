@@ -5,7 +5,7 @@ export const getRequest = (token?: string) => {
     timeout: 10000,
     baseURL: process.env.REACT_APP_BASE_URL,
     headers: {
-      Authorization: token ? `Bearer ${token}` : '',
+      Authorization: token ? `Token ${token}` : '',
     },
   });
   return request;
