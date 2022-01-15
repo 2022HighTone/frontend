@@ -1,7 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const color = {
-  main: '#ffffff',
+  main: '#f17f15',
+  input: '#e9e9e9',
+  placeholder: '#9d9d9d',
+  secondary: '#555555',
 };
 
 const global = createGlobalStyle`
