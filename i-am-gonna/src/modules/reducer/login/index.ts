@@ -9,7 +9,7 @@ import {
   loginActionType,
 } from '../../action/login';
 
-interface ILoginState {
+export interface ILoginState {
   id: string;
   password: string;
   error: error;

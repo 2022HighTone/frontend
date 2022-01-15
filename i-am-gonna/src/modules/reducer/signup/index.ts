@@ -10,7 +10,7 @@ import {
   signupActionType,
 } from '../../action/signup';
 
-interface ISignupState {
+export interface ISignupState {
   name: string;
   email: string;
   password: string;
