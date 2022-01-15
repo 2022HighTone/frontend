@@ -9,7 +9,7 @@ export const LOGIN_FAILURE = 'LOGIN/LOGIN_FAILURE' as const;
 
 export const id = createAction(ID)<string>();
 export const password = createAction(PASSWORD)<string>();
-export const login = createAction(LOGIN)<{ token: string }>();
+export const login = createAction(LOGIN)();
 export const loginSuccess = createAction(LOGIN_SUCCESS)();
 export const loginFailure = createAction(LOGIN_FAILURE)<error>();
 
