@@ -21,4 +21,5 @@ export { default as fastfoodMarker } from './fastfoodMarker.svg';
 export { default as japaneseMarker } from './japaneseMarker.svg';
 export { default as koreanMarker } from './koreanMarker.svg';
 export { default as underIcon } from './under.svg';
-export { default as fitering } from './fitering.svg';
+export { default as filtering } from './filtering.svg';
+export { default as profile } from './profile.svg';
