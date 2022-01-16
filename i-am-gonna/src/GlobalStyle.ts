@@ -5,6 +5,7 @@ export const color = {
   input: '#e9e9e9',
   placeholder: '#9d9d9d',
   secondary: '#555555',
+  feight: '#f8f8f8',
 };
 
 const global = createGlobalStyle`
