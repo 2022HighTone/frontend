@@ -4,5 +4,10 @@ export const Main = styled.div`
   width: 100%;
   min-width: 1440px;
   height: 100vh;
-  background-color: #c4c4c4;
+  display: flex;
+`;
+
+export const MainImg = styled.img`
+  width: 938px;
+  height: 821px;
 `;
