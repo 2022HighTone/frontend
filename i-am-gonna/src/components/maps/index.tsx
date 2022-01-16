@@ -8,7 +8,16 @@ import Menu from './Menu';
 import { useDispatch } from 'react-redux';
 import { DEFAULT_SCHOOL } from '../../modules/action/search';
 import useSearch from '../../util/hooks/search/useSearch';
-import { filtering, profile } from '../../assests/map';
+import {
+  cafeMarker,
+  chineseMarker,
+  fastfoodMarker,
+  filtering,
+  japaneseMarker,
+  koreanMarker,
+  profile,
+  snackMarker,
+} from '../../assests/map';
 import { GETUSERINFO } from '../../modules/action/map';
 
 const Map = () => {
@@ -36,48 +45,60 @@ const Map = () => {
         center: new naver.maps.LatLng(state.schoolLat, state.schoolLng),
         zoom: 17,
       });
-      state.stores.map(data => {
+      let marker = state.stores.map(data => {
         switch (data.category_name) {
           case 'KOREAN':
             new naver.maps.Marker({
               position: new naver.maps.LatLng(data.latitude, data.longitude),
               map: map,
-              icon: '../../assests/map/koreanMarker.svg',
+              icon: {
+                content: `<img src=${koreanMarker} />`,
+              },
             });
             break;
           case 'CAFE':
             new naver.maps.Marker({
               position: new naver.maps.LatLng(data.latitude, data.longitude),
               map: map,
-              icon: '../../assests/map/cafeMarker.svg',
+              icon: {
+                content: `<img src=${cafeMarker} />`,
+              },
             });
             break;
           case 'CHINESE':
             new naver.maps.Marker({
               position: new naver.maps.LatLng(data.latitude, data.longitude),
               map: map,
-              icon: '../../assests/map/chineseMarker.svg',
+              icon: {
+                content: `<img src=${chineseMarker} />`,
+              },
             });
             break;
           case 'JAPANESE':
             new naver.maps.Marker({
               position: new naver.maps.LatLng(data.latitude, data.longitude),
               map: map,
-              icon: '../../assests/map/japaneseMarker.svg',
+              icon: {
+                content: `<img src=${japaneseMarker} />`,
+              },
             });
             break;
           case 'FASTFOOD':
             new naver.maps.Marker({
               position: new naver.maps.LatLng(data.latitude, data.longitude),
               map: map,
-              icon: '../../assests/map/fastfoodMarker.svg',
+              icon: {
+                content: `<img src=${fastfoodMarker} />`,
+              },
             });
             break;
           case 'SNACK':
             new naver.maps.Marker({
               position: new naver.maps.LatLng(data.latitude, data.longitude),
               map: map,
-              icon: '../../assests/map/snackMarker.svg',
+              icon: {
+                content: `<img src=${snackMarker} />`,
+              },
             });
             break;
           default:
